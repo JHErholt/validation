@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="form-container">
+            <form name="form" id="form">
+                <fieldset>
+                    <legend>Validerings opgave</legend>
+                    <div class="flex-group">
+                        <div class="input-container">
+                            <label for="fName">Fornavn <abbr title="Required">*</abbr> </label> <br>
+                            <input name="fName" placeholder="John" type="text" onkeydown="validateChar1(event)"
+                                id="fName">
+                        </div>
+                        <div class="input-container">
+                            <label for="lName">Efternavn <abbr title="Required">*</abbr></label> <br>
+                            <input name="lName" placeholder="Doe" type="text" pattern="[a-zA-Z]*" id="lName">
+                        </div>
+                    </div>
+                    <div class="flex-group">
+                        <div class="input-container">
+                            <label for="bday">Fødselsdag <abbr title="Required">*</abbr></label> <br>
+                            <input name="bday" type="date" id="bday">
+                        </div>
+                        <div class="input-container">
+                            <label for="phone">Telefonnummer <abbr title="Required">*</abbr></label> <br>
+                            <input name="phone" placeholder="12345678" type="text" minlength="8" maxlength="8"
+                                id="phone" onkeydown="validateChar(event)">
+                        </div>
+                    </div>
+                    <div class="flex-group">
+                        <div class="input-container">
+                            <label for="mail">E-mail <abbr title="Required">*</abbr></label><br>
+                            <input name="mail" placeholder="john@doe.com" type="text" id="mail">
+                        </div>
+                        <div class="input-container">
+                            <label for="reMail">Gentag E-mail <abbr title="Required">*</abbr></label><br>
+                            <input name="reMail" placeholder="john@doe.com" type="text" id="reMail">
+                        </div>
+                    </div>
+                    <div class="flex-group">
+                        <div class="input-container">
+                            <label for="password">Kode (Minimum 8 tegn) <abbr title="Required">*</abbr></label><br>
+                            <input name="password" type="password" minlength="8" id="password">
+                        </div>
+                        <div class="input-container">
+                            <label for="rePassword">Gentag kode <abbr title="Required">*</abbr></label><br>
+                            <input name="rePassword" type="password" minlength="8" id="rePassword">
+                        </div>
+                    </div>
+                    <div class="flex-group">
+                        <button class="submit" type="submit">Send</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <!-- <h2 id="result"></h2> -->
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
